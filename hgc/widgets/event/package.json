@@ -1,0 +1,60 @@
+{
+  "name": "cell",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    "./event-card-demo": "./src/components/event-card-demo/event-card-demo.tsx",
+    "./button-stack": "./src/button-stack/button-stack.tsx"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "commitlint": "commitlint",
+    "gen:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit",
+    "format-and-lint": "biome check .",
+    "format-and-lint:ci": "biome ci",
+    "format-and-lint:fix": "biome check . --write",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "precommit": "pnpm format-and-lint:ci && pnpm check-types",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@chromatic-com/storybook": "3.2.3",
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cz-commitlint": "^19.6.1",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/addon-onboarding": "8.4.7",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/react": "8.4.7",
+    "@storybook/react-vite": "8.4.7",
+    "@storybook/test": "8.4.7",
+    "@turbo/gen": "1.12.4",
+    "@types/node": "22.10.5",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "chromatic": "11.22.0",
+    "commitizen": "^4.3.1",
+    "git-cz": "4.9.0",
+    "storybook": "8.4.7",
+    "typescript": "5.5.4",
+    "vitest": "2.1.8"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "next": "^14.2.24"
+  },
+  "packageManager": "pnpm@9.5.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

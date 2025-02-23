@@ -1,5 +1,5 @@
 {
-  "name": "with-tailwind",
+  "name": "hgc",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -16,5 +16,11 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
+  "dependencies": {
+    "next": "^14.2.24"
   }
 }
